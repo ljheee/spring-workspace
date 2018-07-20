@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <!--特别注意：新建的webapp项目，web.xml版本默认2.3，一定要改到2.5以上-->
+
+
+  <!--初始化DispatcherServlet时，默认加载WEB-INF/servletName-srevlet.xml 配置文件-->
+  <!--实际项目中，SpringMVC的配置文件通常放入resources目录下，通过init-param指定-->
+  <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/spring-mvc.xml</param-value>
+    </init-param>
+
+    <!--当值为0或者大于0时，表示容器在应用启动时就加载这个servlet；
+    当是一个负数时或者没有指定时，则指示容器在该servlet被选择时才加载。-->
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
