@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring5-aop" />
         <module name="springmvc-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring5-aop" target="1.5" />
       <module name="springmvc-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>

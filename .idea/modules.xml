@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring5-aop/spring5-aop.iml" filepath="$PROJECT_DIR$/spring5-aop/spring5-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/springmvc-demo/springmvc-demo.iml" filepath="$PROJECT_DIR$/springmvc-demo/springmvc-demo.iml" />
     </modules>
   </component>
